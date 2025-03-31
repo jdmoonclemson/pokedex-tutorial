@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="style.css" />
     <script src="./pokemon.js" defer></script>
     <script src="./search.js" defer></script>
-    
+    <div id="navbar"></div>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+     fetch('navBar.html')
+         .then(response => response.text())
+         .then(data => {
+             document.getElementById('navbar').innerHTML = data;
+         });
+ });</script>
   </head>
   <body>
     <main class="main">
